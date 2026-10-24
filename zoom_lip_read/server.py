@@ -22,6 +22,20 @@ from typing import Callable, Optional
 # Module-level lock so at most one non-fake transcription runs at a time (R5.8).
 _LOCK = threading.Lock()
 
+# Loaded models are kept here so each chunk reuses them. Loading Whisper and the
+# 1 GB lip-reading checkpoint takes far longer than a 5 s chunk, so they must be
+# built once per server process, not once per request. Keyed by class so tests
+# that swap in fakes get their own instances.
+_MODELS: dict = {}
+
+
+def _cached(cls, *args):
+    inst = _MODELS.get(cls)
+    if inst is None:
+        inst = cls(*args)
+        _MODELS[cls] = inst
+    return inst
+
 
 def fake_mode_enabled() -> bool:
     """FAKE_MODE is on when `FAKE_MODE` is unset or equals "1" (R5.3)."""
@@ -170,7 +184,7 @@ def _default_transcribe(path, chunk_start: float = 0.0, mode: str = "auto") -> l
     from .avsr_lip_reader import AutoAvsrLipReader
 
     # The integrated server path mirrors the validated prototype: small.en (R8.2).
-    cfg = PipelineConfig(whisper=WhisperConfig(model_size="small.en"))
+    cfg = PipelineConfig(whisper=WhisperConfig(model_size="small.en", language="en"))
 
     # Normalize the upload to a single 25 fps mp4 up front so the audio and lip
     # paths share one consistent timeline (R5.12, R5.13). A normalization
@@ -192,7 +206,7 @@ def _default_transcribe(path, chunk_start: float = 0.0, mode: str = "auto") -> l
             spans = [(0.0, total)]
             words = []
         else:
-            words = WhisperTranscriber(cfg.whisper).transcribe(media)[0]
+            words = _cached(WhisperTranscriber, cfg.whisper).transcribe(media)[0]
             if mode == "audio_only":
                 # Audio segments only; no lip reading (R7.1).
                 spans = []
@@ -200,10 +214,10 @@ def _default_transcribe(path, chunk_start: float = 0.0, mode: str = "auto") -> l
                 # auto: flag unreliable spans; unreadable audio -> whole-clip span.
                 flagged = NoiseDetector(cfg.noise, cfg.sample_rate).detect(waveform)
                 spans = [(s.start, s.end) for s in flagged]
-                if not spans:
-                    # No usable/flagged audio: treat the whole chunk as one lip
-                    # span (R7.6). An empty waveform yields no flagged spans, so
-                    # this also covers the unreadable-in-auto case.
+                if not spans and len(waveform) == 0:
+                    # Audio could not be decoded at all: lip-read the whole chunk.
+                    # (No flagged spans with readable audio means the audio is
+                    # clean, so Whisper's words are kept and nothing is lip-read.)
                     spans = [(0.0, total)]
 
         # Audio records: words whose midpoint lies outside every span (R7.3).
@@ -212,7 +226,7 @@ def _default_transcribe(path, chunk_start: float = 0.0, mode: str = "auto") -> l
         )
 
         # One lip record per span (R6.2-R6.4, R7.3).
-        lip_reader = AutoAvsrLipReader()
+        lip_reader = _cached(AutoAvsrLipReader) if spans else None
         for a, b in spans:
             text = lip_reader.read_segment(media, a, b)  # same normalized timeline (R5.13)
             records.append(
