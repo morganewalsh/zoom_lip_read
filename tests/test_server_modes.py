@@ -352,14 +352,17 @@ def test_property10_absent_audio_table():
             except AssertionError as exc:
                 ok = False
                 print(f"    no-audio counterexample mode={mode} d={duration} cs={cs}: {exc}")
-    # Unreadable audio in auto: detector yields no spans -> whole-clip fallback.
-    for duration, cs in [(10.0, 0.0), (8.0, 1.5)]:
-        try:
-            _assert_absent_audio(duration, cs, mode="auto", has_audio=True, spans=[])
-        except AssertionError as exc:
-            ok = False
-            print(f"    unreadable-auto counterexample d={duration} cs={cs}: {exc}")
     check("Property 10: absent/unreadable audio -> one full-length lip span (table)", ok)
+
+
+def test_clean_audio_auto_keeps_whisper():
+    # Readable audio with nothing flagged: keep Whisper's words, lip-read nothing.
+    with _Harness(words=_words([(0.0, 0.4), (1.0, 1.4)]), spans=[], duration=5.0, has_audio=True) as h:
+        recs = server._default_transcribe("clip.mp4", chunk_start=2.0, mode="auto")
+    ok = bool(recs) and all(r["source"] == "audio" for r in recs) and h.calls.lip_reads == 0
+    if not ok:
+        print("    recs:", recs)
+    check("clean audio in auto mode -> audio segments only, no lip reading", ok)
 
 
 # --------------------------------------------------------------------------- #
@@ -452,6 +455,7 @@ if __name__ == "__main__":
     print("test_property8_mode_exclusivity_table"); test_property8_mode_exclusivity_table()
     print("test_property9_auto_partition_table"); test_property9_auto_partition_table()
     print("test_property10_absent_audio_table"); test_property10_absent_audio_table()
+    print("test_clean_audio_auto_keeps_whisper"); test_clean_audio_auto_keeps_whisper()
     print("test_property6_offset_additive_table"); test_property6_offset_additive_table()
     if HAS_HYPOTHESIS:
         print("test_property9_auto_partition_hypothesis"); test_property9_auto_partition_hypothesis()
