@@ -346,5 +346,7 @@ class AutoAvsrLipReader(LipReader):
                 seg = self._extract_segment(video_path, s, e)
                 crops = self._crops(seg)
                 return self._decode(crops)
-        except Exception:
+        except Exception as e:
+            # Still never raises, but print why so failures are visible in the server log.
+            print(f"lip read failed for {start:.2f}-{end:.2f}s: {e!r}")
             return ""
