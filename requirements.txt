@@ -1,0 +1,16 @@
+faster-whisper>=1.0.0
+librosa>=0.10.0
+soundfile>=0.12.1
+numpy>=1.24.0
+
+# Server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Model / media (unpinned to avoid clashing with auto_avsr).
+# Use pytorch-lightning, NOT lightning: the bare `lightning` package clashes
+# with auto_avsr's lightning.py module.
+pytorch-lightning
+av
+mediapipe

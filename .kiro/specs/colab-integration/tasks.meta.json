@@ -1,0 +1,395 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Write property/unit tests for the ffmpeg loader and `has_audio`": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877649884
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877675636
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877941306
+      }
+    ],
+    "2.1 Write a unit test that the transcriber passes an ndarray, not a path": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877650525
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877945954
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878115054
+      }
+    ],
+    "3. Checkpoint - audio source swapped, existing tests green": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877650925
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879625214
+      }
+    ],
+    "4.1 Write property tests for `_scaled_size`, `_pad`, `_env_path`": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877651208
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877677101
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877940186
+      }
+    ],
+    "5. Implement `AutoAvsrLipReader` construction and lazy model loading": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877651479
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877677659
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877939621
+      }
+    ],
+    "6. Implement `AutoAvsrLipReader` frame reading, decode, and extraction helpers": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877651845
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877947268
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878114227
+      }
+    ],
+    "7.1 Write a property test that `read_segment` never raises": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877652401
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878230836
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878702094
+      }
+    ],
+    "8.1 Write a property test for CLI selection truth table": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877653170
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878132119
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878221163
+      }
+    ],
+    "9.1 Write a property test for exact key sets and the unclear biconditional": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877653794
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877947980
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878116105
+      }
+    ],
+    "10. Checkpoint - lip reader, CLI, serializer complete": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877654373
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879628370
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879631693
+      }
+    ],
+    "11.1 Write the FAKE_MODE server test and /health property test": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877654991
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878232287
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878700031
+      }
+    ],
+    "12.1 Write non-fake envelope and cleanup tests via injected transcribe": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877655635
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878832069
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879108439
+      }
+    ],
+    "13.1 Write mode, partition, and offset property tests with injected fakes": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877656228
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879113480
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879468128
+      }
+    ],
+    "14.1 Write a manifest test": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877656936
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878232887
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878701577
+      }
+    ],
+    "15. Add import-safety tests for heavy-dependency isolation": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877657582
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878716650
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878825092
+      }
+    ],
+    "16.1 Add host-only smoke tests gated on the `auto_avsr` repo + GPU + ffmpeg media": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877658041
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879114402
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879468923
+      }
+    ],
+    "17. Final checkpoint - full suite green on Windows": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877658639
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879634852
+      },
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879638132
+      }
+    ],
+    "4. Create `avsr_lip_reader.py` with extractable pure helpers": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877940805
+      }
+    ],
+    "1. Replace the audio loader with the ffmpeg decoder and add `has_audio`": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792877941979
+      }
+    ],
+    "2. Wire `WhisperTranscriber` to pass a numpy waveform to faster-whisper": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878115560
+      }
+    ],
+    "9. Add the server-shaped serializer in `output.py`": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878116899
+      }
+    ],
+    "8. Update CLI lip-reader selection": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878221796
+      }
+    ],
+    "11. Implement the FastAPI server shell and FAKE_MODE path": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878700746
+      }
+    ],
+    "14. Update `requirements.txt`": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878702605
+      }
+    ],
+    "7. Implement `AutoAvsrLipReader.read_segment` (3-arg contract, never raises)": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792878702989
+      }
+    ],
+    "12. Implement the non-fake request handling in `/transcribe_chunk`": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879109108
+      }
+    ],
+    "13. Implement `_default_transcribe` and `_clip_duration` backend-style entry": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879469312
+      }
+    ],
+    "16. Add gated host-only integration tests (manual / CI-skipped)": [
+      {
+        "executionId": "06aeeef2-f6f7-47c8-9b1a-6733bc36676e",
+        "chatSessionId": "sess_79173c32-c9e8-4313-a3c3-eeccbb0930d4",
+        "timestamp": 1792879469873
+      }
+    ],
+    "18.1 Test normalization-before-transcription with injected fakes": [
+      {
+        "executionId": "aa5cd163-ec21-4c37-8cfa-4916dce98f27",
+        "chatSessionId": "sess_bdd29272-c929-45b8-bb6f-248931e9f41d",
+        "timestamp": 1792880569893
+      },
+      {
+        "executionId": "aa5cd163-ec21-4c37-8cfa-4916dce98f27",
+        "chatSessionId": "sess_bdd29272-c929-45b8-bb6f-248931e9f41d",
+        "timestamp": 1792880758464
+      },
+      {
+        "executionId": "aa5cd163-ec21-4c37-8cfa-4916dce98f27",
+        "chatSessionId": "sess_bdd29272-c929-45b8-bb6f-248931e9f41d",
+        "timestamp": 1792880969309
+      }
+    ],
+    "18. Add 25fps MP4 normalization to the server's non-fake path": [
+      {
+        "executionId": "aa5cd163-ec21-4c37-8cfa-4916dce98f27",
+        "chatSessionId": "sess_bdd29272-c929-45b8-bb6f-248931e9f41d",
+        "timestamp": 1792880580727
+      },
+      {
+        "executionId": "aa5cd163-ec21-4c37-8cfa-4916dce98f27",
+        "chatSessionId": "sess_bdd29272-c929-45b8-bb6f-248931e9f41d",
+        "timestamp": 1792880754936
+      }
+    ]
+  }
+}
